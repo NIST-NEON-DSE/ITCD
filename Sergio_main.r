@@ -45,7 +45,7 @@ main <- function(pt.root = NULL, proj = NULL, minClusterSize=15, conWin = 5, Num
       rasters$hsp <- brick(paste('./outputs/filtered/', j, "_bb350_2512.tif", sep= ""))
     }
     if(!file.exists('./outputs/pca_plot1.tif')){
-        #pca <- rasterPCA(rasters$hsp)
+        pca <- rasterPCA(rasters$hsp)
     }
     pca <- brick('./outputs/pca_plot1.tif')
     
